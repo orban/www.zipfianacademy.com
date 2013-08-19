@@ -1,0 +1,149 @@
+<article class="text data_science health restaurants statistics maps" id="post_57158627293" data-postid="57158627293" data-permalink="http://blog.zipfianacademy.com/post/57158627293/how-to-data-science-mapping-sf-restaurant-inspection" data-reblog="http://www.tumblr.com/reblog/57158627293/vqd08B2w" style="visibility: visible; display: block;">
+    <header>
+      <h2><a href="http://blog.zipfianacademy.com/post/57158627293/how-to-data-science-mapping-sf-restaurant-inspection">How to Data (Science): Mapping SF Restaurant Inspection Scores</a></h2>
+      <p class="permalink ir"><a href="http://blog.zipfianacademy.com/post/57158627293/how-to-data-science-mapping-sf-restaurant-inspection">Permalink</a></p>
+    </header>
+    <section>
+      <p><em>Are you a company or data scientist that would like to <a href="http://www.zipfianacademy.com/getinvolved" target="_blank">get involved</a>? Give us a shout at <a href="mailto:hello@zipfianacademy.com" target="_blank">hello@zipfianacademy.com</a>.</em></p>
+
+<p><em>If this post excites you, I encourage you to <a href="http://zipfiancollective.wufoo.com/forms/m7x3z9/" target="_blank">apply</a> to our 12 week <a href="http://zipfianacademy.com" target="_blank">immersive bootcamp</a> (applications close August 5th) where you will learn data science through hands-on exercises and real world projects!</em></p>
+
+<p>In our previous <a href="http://blog.zipfianacademy.com/post/46864003608/a-practical-intro-to-data-science" target="_blank">post</a>, we outlined the best data science resources we have found online.  In this post, we’ll walk through our data science <a href="http://zipfianacademy.com/data/data-science-process.png" target="_blank">process</a> by analyzing the inspections of San Francisco restaurants using publicly available <a href="http://www.sfdph.org/dph/EH/Food/score/default.asp" target="_blank">data</a> from the Department of Public health.  We will explore this data to map the cleanliness of the city and gain perspective on the relative meaning of these scores through statistics.   During the analysis, we used a spectrum of powerful tools for data science (from UNIX shell to <a href="http://pandas.pydata.org/" target="_blank">pandas</a> and <a href="http://matplotlib.org/" target="_blank">matplotlib</a>) and provide some tips and data tricks.</p>
+
+<p><strong>While the health inspection scores are based on a fixed scale (i.e. threshold for health quality) where each restaurant can be considered a independent random variables, we think there is value in looking at how they are distributed.  This does not actually asses the chance of food borne illness or quality of food but simply looks at the scores from an exploratory perspective</strong></p>
+
+<h4>Takeaways</h4>
+
+<blockquote>
+  <p>Understand the Data Science <a href="http://zipfianacademy.com/data/data-science-workflow/animate.gif" target="_blank">Process</a></p>
+  
+  <p>Learn about essential tools (UNIX, Python and associated libraries)</p>
+  
+  <p>Be inspired by Open Data and our role as data citizens</p>
+</blockquote>
+
+<p>All of the code is contained in an IPython notebook and can be <a href="http://nbviewer.ipython.org/urls/raw.github.com/Jay-Oh-eN/happy-healthy-hungry/master/h3.ipynb" target="_blank">viewed</a> or downloaded from <a href="https://github.com/Jay-Oh-eN/happy-healthy-hungry" target="_blank">Github</a>.</p>
+
+<h3>tl;dr</h3>
+
+<p>When we analyzed the data, we found that the most common was a perfect score of 100. Interestingly, the distribution is heavily skewed towards high scores (mean of 92, 75% quartile of 98, 25% quartile of 88), and there exists a <a href="http://" target="_blank">long tail</a> of restaurants with very low scores.</p>
+
+<p>Plotting the data geographically, we find that there is a large concentration of restaurants with scores below 70 in Chinatown and Civic Center, putting them in the bottom 1/10th of all scores. The contrast in scores between the Financial district and Chinatown is quite interesting: the highest scoring restaurants cluster (FiDi) neighbors the lower scoring cluster (Chinatown). Also of particular interest was the gradient of 24th St. moving from the Noe Valley (high scores) towards the Mission (lower scores). We plan on adding more data to correlate common health violations with scores in those areas. Have any ideas for a health data mashup? Send them our way at <a href="mailto:hello@zipfianacademy.com" target="_blank">hello@zipfianacademy.com</a></p>
+
+<p>The interactive map below allows you to visualize the the data by scores and density. Check it out and see for yourself:</p>
+
+<p><a href="http://zipfianacademy.com/maps/h3/" target="_blank"><img src="http://media.tumblr.com/8f0e43ab4233e7fe04db9360f79df6b9/tumblr_inline_mqv2h3pU7e1qz4rgp.png" alt=""></a></p>
+
+<p>Each restaurant is geographically binned using the D3.js <a href="https://github.com/d3/d3-plugins/tree/master/hexbin" target="_blank">hexbin</a> plugin.  The color gradient of each hexagon reflects the median inspection score of the bin, and the radius of the hexagon is proportional to the number of restaurants that fall in the bin.  Binning is first computed with a uniform hexagon radius over the map, and then the radius of each individual hexagon is adjusted for how many restaurants ended up in its bin.</p>
+
+<p>Large blue hexagons represent many high scoring restaurants in an area and small red mean a few very poorly scoring restaurants.  The controls on the map allow users to adjust the radius (<strong>Bin:</strong>) of the hexagon for computing the binning as well as the range (<strong>Score:</strong>) of scores to show/use on the map.  The color of the <strong>Bin:</strong> slider represents the average color of the two <strong>Score:</strong> range sliders and its size represents the radius of the hexagons used to compute the binning.  The colors of each of the <strong>Score:</strong> sliders represent the threshold color for that score, i.e. if the range is 40 - 100 the left slider’s color corresponds to a score of 40 and the right slider to a score of 100.  The colors for every score in-between are computed using a power scale gradient (with exponent 5).</p>
+
+<h3>Motivation</h3>
+
+<p>Somewhat recently, <a href="http://www.yelp.com/" target="_blank">Yelp</a> <a href="http://officialblog.yelp.com/2013/01/introducing-lives.html" target="_blank">announced</a> that it is <a href="http://foodinspectiondata.us/" target="_blank">partnering</a> with <a href="http://codeforamerica.org/" target="_blank">Code for America</a> and the <a href="https://data.sfgov.org/" target="_blank">City of San Francisco</a> to develop <a href="http://www.yelp.com/healthscores" target="_blank">LIVES</a>, an open data standard which allows municipalities to publish restaurant inspection data in a standardized format.  This is a step towards a much much more transparent government, leading ultimately to a more engaged citizenry.</p>
+
+<p>To understand what those opaque numbers in restaurant windows mean, I set out to use statistics and data science to better grasp the implications of the ratings.</p>
+
+<h3>Process</h3>
+
+<p>The entire process has been documented in an IPython notebook <a href="http://nbviewer.ipython.org/urls/raw.github.com/Jay-Oh-eN/happy-healthy-hungry/master/h3.ipynb" target="_blank">here</a> and I hope anyone who is curious will run the code and review the analyses before they take the results at face value (because <a href="http://petewarden.com/2013/07/18/why-you-should-never-trust-a-data-scientist/" target="_blank">No one should trust a data scientist</a>).</p>
+
+<p>Some interesting results and insights I have found can be summed up by the plots below.</p>
+
+<p>In order to learn more about the relative rating of each restaurant and find out just how good a 90 is, I simply plotted all the data in a histogram.  It turns out (quite surprisingly) that the majority of restaurants score better than 94 and that 100 is the mode of the dataset.  This is actually quite comforting to know that so many restaurants score so well, but might make you think twice about eating at your favorite restaurant that happened to score a 90.</p>
+
+<p><a href="http://zipfianacademy.com/maps/h3/histograms.png" target="_blank"><img src="http://media.tumblr.com/ed9ff69139fdb01dc4452ccda9469880/tumblr_inline_mqv5q9sbrH1qz4rgp.png" alt=""></a></p>
+
+<p>The right plot is a binning of the scores into the categories the city defined to give a more qualitative interpretation of the scores (‘Poor’, ‘Needs Improvement’, ‘Adequate’, and ‘Good’).  The interesting thing to note about these quantizations of the scores is that the scale is very nonlinear: 0 -&gt; 70, 71 -&gt; 85, 86 -&gt; 90, 91 -&gt; 100.</p>
+
+<p><a href="http://zipfianacademy.com/maps/h3/quantiles.png" target="_blank"><img src="http://media.tumblr.com/c1b527657b3f2bc1e45d263fe8445736/tumblr_inline_mqv5qg9H8H1qz4rgp.png" alt=""></a></p>
+
+<p>With such a skewed distribution and nonlinear scales, often our old way of thinking does not directly translate.  To get a better grasp on the relative scores of restaurants compared to each other (and potentially other cities) I computed the quantiles for the distribution.  This allows us to have a somewhat standardized ranking to compare different scales and distributions in a normalized fashion.  It is for this reason that summary statistics can be quite powerful tools for inference and a standard tool in any statistician’s (or data scientist’s) tool belt.</p>
+
+<p>Due to these very basic and easy to implement analyses, I am now a much more informed citizen and realize that scales in general can distort your perception.  In school we come to internalize 70 as a passing score, anything better than 90 quite good, and 98-100 to be unheard of… for Berkeley Physics at least ;)</p>
+
+<h3>Conclusion</h3>
+
+<p>I hope this post showed you that you do not necessarily need to do very complex analyses to get interesting insights and that it inspires folks to get out there and start working with open data.  The first step to breaking into data science is to start making, and pick a project that you are passionate about (or always wanted to know the answer to).  If you have any questions about restaurant health inspection data, the data science process, or our program and classes please do not hesitate to reach out (or to just say hello!) at <a href="mailto:jonathan@zipfianacademy.com" target="_blank">jonathan@zipfianacademy.com</a>.  Happy Data-ing!</p>
+
+<p><strong><em>Cheers,</em></strong></p>
+
+<p><strong><em>Jonathan</em></strong></p>
+      
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+      
+      <ul class="credit">
+        
+        
+      </ul>
+      <ul class="time">
+        <li class="timeago"><a href="http://blog.zipfianacademy.com/post/57158627293/how-to-data-science-mapping-sf-restaurant-inspection">08/02/13</a></li>
+      </ul>
+      
+    </section>
+    
+    
+    <footer>
+      
+      <ul class="meta">
+      
+        <li class="notes"><a href="http://blog.zipfianacademy.com/post/57158627293/how-to-data-science-mapping-sf-restaurant-inspection">5 notes</a></li>
+      </ul>
+      <ul class="tumblr-action">
+          <li class="reblog">
+            <a href="http://www.tumblr.com/reblog/57158627293/vqd08B2w" target="_blank">
+              <span aria-hidden="true"></span>
+              <strong>Reblog</strong>
+            </a>
+          </li>
+          <li class="like" data-reblog="http://www.tumblr.com/reblog/57158627293/vqd08B2w" data-postid="57158627293">
+            <a href="">
+              <span aria-hidden="true"></span>
+              <strong>Like</strong>
+            </a>
+          </li>
+      </ul>
+      <ul class="share">
+        <li>
+          <a href="#" class="share-link" data-permalink="http://blog.zipfianacademy.com/post/57158627293/how-to-data-science-mapping-sf-restaurant-inspection">
+            <span aria-hidden="true"></span>
+            <strong>Share</strong>
+          </a>
+          <div class="share_links_wrapper">
+             
+                <div class="share-buttons" data-permalink="http://blog.zipfianacademy.com/post/57158627293/how-to-data-science-mapping-sf-restaurant-inspection"></div>
+            
+          </div>
+        </li>
+      </ul>
+      
+      <ul class="tags">      
+          <li class="tt_data+science"><a href="http://blog.zipfianacademy.com/tagged/data-science" title="How to Data (Science): Mapping SF Restaurant Inspection Scores - data science">data science</a></li> <li class="tt_health"><a href="http://blog.zipfianacademy.com/tagged/health" title="How to Data (Science): Mapping SF Restaurant Inspection Scores - health">health</a></li> <li class="tt_restaurants"><a href="http://blog.zipfianacademy.com/tagged/restaurants" title="How to Data (Science): Mapping SF Restaurant Inspection Scores - restaurants">restaurants</a></li> <li class="tt_statistics"><a href="http://blog.zipfianacademy.com/tagged/statistics" title="How to Data (Science): Mapping SF Restaurant Inspection Scores - statistics">statistics</a></li> <li class="tt_maps"><a href="http://blog.zipfianacademy.com/tagged/maps" title="How to Data (Science): Mapping SF Restaurant Inspection Scores - maps">maps</a></li> 
+      </ul>
+      
+    </footer>
+    
+
+    
+    
+
+    
+  </article>
