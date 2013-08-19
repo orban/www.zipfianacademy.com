@@ -1,0 +1,6 @@
+---
+categories: data_science
+date: 2013/09/01 00:00:00
+title: The data science mindset
+---
+We can copy this from [here](https://github.com/tlevine/www.thomaslevine.com/tree/master/content/!/data-science/index.md).
