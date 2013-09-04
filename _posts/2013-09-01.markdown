@@ -3,22 +3,40 @@ categories: data_science
 date: 2013/09/01 00:00:00
 title: The data science mindset
 ---
-<!-- This currently uses first person singular; we might change it to first person plural. -->
+I resisted defining "data science" for the longest time, but I figured
+I should define it because otherwise I'd have no idea what to teach. :)
 
 I don't see "data science" as being about specific tools or datasets
 or math; rather, it's the mindset that we can exploit inexpensive computing
 power to study how the world works. If you start with this mindset, the
-various contemporary data science techniques follow. We've broken it into
-a few parts.
+various contemporary data science techniques follow.
 
-1. Store everything.
-2. Anything can be quantified.
-3. Boring work should be sent to robots.
+This mindset is also my mindset. You see, people started calling me a
+"data scientist" without telling me what it meant, so I figure that people
+who think like I do are data scientists.
 
 ## Store everything
 Storage is cheap, so you should store everything that is easy to collect.
 Store it in the most raw form that is convenient, and don't worry very
 much about how or even whether you're going to analyze it.
+
+### Use existing data
+When I'm asked a question about the world, I adapt the question so that it can
+be approximately answered with an existing and convenient dataset. I look for
+opportunities to use existing stores of data in unintended ways.
+
+### Connect datasets
+Since you're storing everything, you should focus on connecting datasets rather than on tuning models.
+In a conventional statistics class, you'll learn a lot about how to choose
+analysis methods that are appropriate for your data collection approach and how
+to tune the models for a specific dataset.
+
+Now that we suddenly have hoards of inexpensive data that we haven't seen before,
+there's a lot to be learned by looking using more of these data. Don't worry so much
+about making the best use out of one dataset; data science is about using a range of
+datasets, and especially about connect one dataset to lots of other datasets. To use
+machine learning speak, you should focus more on collecting features rather than on
+tuning your model.
 
 ## Anything can be quantified
 Everything can be turned into a number, and these numbers can be put in tables.
@@ -49,23 +67,6 @@ attitudes that relate to this concept.
 
 To say this more explosively, I value laziness.
 
-## Focus on connecting datasets rather than on tuning models
-In a conventional statistics class, you'll learn a lot about how to choose
-analysis methods that are appropriate for your data collection approach and how
-to tune the models for a specific dataset. That way of thinking is not new.
-
-Here's the new thing. Now that we have hoards of inexpensive data, it's not
-worth worrying so much about making the best use out of one dataset; it's better
-to use a range of datasets, and especially to connect one dataset to lots of
-other datasets. To use machine learning speak, you should focus more on collecting
-features rather than on tuning your model.
-
-Relating this to the earlier point that you should store everything, here are some of the ways I think.
-
-* When I'm asked a question about the world, I adapt the question so that it can
-    be approximately answered with an existing and convenient dataset.
-* I look for opportunities to use existing stores of data in unintended ways.
-
 ## Tools
 Since I have the aforementioned mindset and the consequential mindsets, I wind
 up learning a bunch of tools that align with that mindset. For example, I know
@@ -79,8 +80,3 @@ Properly discussing these relevant tools would take a while, but here's a small
 thought: You don't need to know much math to do data science. Loads of wonderful
 algorithms have already been implemented for you, and simple algorithms work quite
 well. The more important tools are "plumbing" that connects different datasets and systems.
-
-## How to learn data science
-I see data science as a mindset that we should use inexpensive computers
-to understand how the world works. I wind up learning specific programs,
-languages, models, &c. to assist in my study of the world, but y
