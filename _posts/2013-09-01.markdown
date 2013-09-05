@@ -3,7 +3,7 @@ categories: data_science
 date: 2013/09/01 00:00:00
 title: The data science mindset
 ---
-I resisted defining "data science" for the longest time, but I figured
+I resisted defining "data science" for the longest time, but I recently figured
 I should define it because otherwise I'd have no idea what to teach. :)
 
 I don't see "data science" as being about specific tools or datasets
@@ -11,9 +11,9 @@ or math; rather, it's the mindset that we can exploit inexpensive computing
 power to study how the world works. If you start with this mindset, the
 various contemporary data science techniques follow.
 
-This mindset is also my mindset. You see, people started calling me a
-"data scientist" without telling me what it meant, so I figure that people
-who think like I do are data scientists.
+People started calling me a "data scientist" without telling me what it meant,
+so this mindset is really just my mindset, and I figure that people who think
+like I do are data scientists.
 
 ## Store everything
 Storage is cheap, so you should store everything that is easy to collect.
@@ -80,3 +80,9 @@ Properly discussing these relevant tools would take a while, but here's a small
 thought: You don't need to know much math to do data science. Loads of wonderful
 algorithms have already been implemented for you, and simple algorithms work quite
 well. The more important tools are "plumbing" that connects different datasets and systems.
+
+Rather than grouping our 12-week course into different software packages or algorithms
+that you might want to do, we're grouping the course by typical projects that you
+might want to conduct. For example, the first week is a recommender. In doing each
+project, students will use a range of different programs, datasets and methods, and
+they'll build the plumbing that connects these different components.
