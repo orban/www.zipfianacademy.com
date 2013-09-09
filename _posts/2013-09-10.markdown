@@ -4,7 +4,7 @@ date: 2013/09/10 00:00:00
 title: The data science mindset
 ---
 Data science involves using lots of hip tools with sexy names like "R",
-but data science isn’t all about the tools you use. I see it as a mindset,
+but data science isn't all about the tools you use. I see it as a mindset,
 a way of looking at the world. It's about taking advantage of our modern
 computers and all of the information (data) that they're already collecting
 in order to study how things work. If we start this mindset, a lot of
@@ -12,7 +12,7 @@ data science approaches naturally follow.
 
 ## Store everything
 Storage is cheap, so you should store everything that is easy to collect;
-You don't need a full-fleged research plan before you start collecting data.
+You don't need a full-fledged research plan before you start collecting data.
 Store it in the most raw form that is convenient, and don't worry very
 much about how or even whether you're going to analyze it.
 
@@ -75,7 +75,7 @@ like by logging the clicks that you're already making on a website.
 
 Robots can also remember what you did so that you don't have to; rather than learning
 and remembering your whole analysis process, you can write a program that does the whole
-thing for you, from the original acquisition of the data to the modelling to the presentation
+thing for you, from the original acquisition of the data to the modeling to the presentation
 of results to a human. By making everything a program, you make it easier to
 find mistakes, to update your analyses, and to turn an analysis into a product.
 
@@ -96,5 +96,5 @@ well. The more important tools are "plumbing" that connects different datasets a
 Rather than grouping our 12-week course into different software packages or algorithms
 that you might want to use, we're grouping the course by typical projects that you
 might want to conduct. For example, the first week is a recommender. In doing each
-project, students will use a range of different programs, datasets and methods, and
-they'll build the plumbing that connects these different components.
+project, students will learn about a range of different programs, datasets and methods,
+and they'll build the plumbing that connects these different components.
