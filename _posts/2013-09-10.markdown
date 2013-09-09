@@ -11,7 +11,8 @@ in order to study how things work. If we start this mindset, a lot of
 data science approaches naturally follow.
 
 ## Store everything
-Storage is cheap, so you should store everything that is easy to collect.
+Storage is cheap, so you should store everything that is easy to collect;
+You don't need a full-fleged research plan before you start collecting data.
 Store it in the most raw form that is convenient, and don't worry very
 much about how or even whether you're going to analyze it.
 
@@ -62,23 +63,21 @@ But when you put them in [one database](http://opencorporates.com/) in a standar
 things start to [feel like data](http://registries.opencorporates.com/).
 
 ## Boring work should be sent to robots
-In general, I think that people should only do things that they want to do;
-if something must be done and nobody wants to do it, a robot should do it[^robot]
-I could come up with economic arguments for this, but this is almost an ethical view for me.
-
-Within the context of data analysis, there are some much more practical reasons
-for this. A typical boring task might be drawing a new graph every time some
+If something must be done and nobody wants to do it, we should get a robot to
+do it. Within the context of data analysis, a typical boring task might be drawing a new graph every time some
 dataset is updated. A robot will do this with substantially more
-consistency/accuracy and for a substantially lower cost. Here are some of my
-attitudes that relate to this concept.
+consistency/accuracy and for a substantially lower cost.
 
-* Data collection should be automatic and unobtrusive; questionnaires and lab
-    studies are too much work.
-* I don't need a full-fleged research plan before you start collecting data;
-    I'll record everything that is convenient, and I'll store it in the most raw form.
-* All analyses should be scripted.
+Data collection is one sort task that should often be sent to a robot. Questionnaires
+and lab studies are too much work for the researcher and the participants;
+it's more data sciencey to collect the data automatically and unobtrusively,
+like by logging the clicks that you're already making on a website.
 
-To say this more explosively, I value laziness.
+Robots can also remember what you did so that you don't have to; rather than learning
+and remembering your whole analysis process, you can write a program that does the whole
+thing for you, from the original acquisition of the data to the modelling to the presentation
+of results to a human. By making everything a program, you make it easier to
+find mistakes, to update your analyses, and to turn an analysis into a product.
 
 ## Tools
 Since I have the aforementioned mindset and the consequential mindsets, I wind
