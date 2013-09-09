@@ -1,6 +1,6 @@
 ---
 categories: data_science
-date: 2013/09/01 00:00:00
+date: 2013/09/10 00:00:00
 title: The data science mindset
 ---
 I resisted defining "data science" for the longest time, but I recently figured
