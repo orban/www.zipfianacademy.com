@@ -41,11 +41,20 @@ tuning your model.
 Everything can be turned into a number, and these numbers can be put in tables.
 By quantifying things, we simplify them such that a computer can process them.
 
+A [spreadsheet about sewer overflows](https://data.illinois.gov/Municipality/SSMMA-Combined-Sewer-Overflow/5yuf-j7kn?)
+is clearly data to most people, but what about a [calendar](http://www.mo.gov/meetings/)?
+At first, a calendar
+might not seem like the sort of data that you analyze with statistics, but you
+can [represent a calendar as a spreadsheet](https://data.mo.gov/Government-Administration/Open-Meetings-Calendar/mahp-izvx?)
+and [make graphs of the calendar](http://thomaslevine.com/!/socrata-calendars)
+
+![](http://thomaslevine.com/!/socrata-calendars/figure/day-of-week.png)
+
 To me, there is no big difference between "qualitative" and "quantitative" data
 nor between "unstructured" and "structured" data because I know that I can convert
 between these opposites.
 
-Read more about this [here](http://thomaslevine.com/!/world-data-world).
+<!-- Read more about this [here](http://thomaslevine.com/!/world-data-world). -->
 
 ## Boring work should be sent to robots
 In general, I think that people should only do things that they want to do;
