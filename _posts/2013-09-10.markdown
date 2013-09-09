@@ -1,58 +1,66 @@
 ---
 categories: data_science
 date: 2013/09/10 00:00:00
-title: The data science mindset
+title: The Data Science Mindset
 ---
-Data science involves using lots of hip tools with sexy names like "R",
-but data science isn't all about the tools you use. I see it as a mindset,
+Data science involves using lots of hip tools with sexy names like "R,"
+but data science isn't all about the tools you use. Data science is a mindset,
 a way of looking at the world. It's about taking advantage of our modern
-computers and all of the information (data) that they're already collecting
-in order to study how things work. If we start this mindset, a lot of
+computers and all of the information (aka data) that they're already collecting
+in order to study how things work. If we start with this mindset, a lot of
 data science approaches naturally follow.
 
-## Store everything
-Storage is cheap, so you should store everything that is easy to collect;
-You don't need a full-fledged research plan before you start collecting data.
+Here are the core tenets of the data science mindset:
+
+## Store Everything
+Storage is cheap, so you should store everything that is easy to collect.
+You don't even need a full-fledged research plan before you start collecting data.
 Store it in the most raw form that is convenient, and don't worry very
-much about how or even whether you're going to analyze it.
+much about how or even whether you're going to analyze it. That part comes later.
 
-### Use existing data
+### Use Existing Data
 Since we're already storing data, let's use it.
-When I have a question about the world, I adapt the question so that it can
-be approximately answered with an existing and convenient dataset. I look for
-opportunities to use existing stores of data in unintended ways.
+When faced with a question about something happening in the world, data scientists adapt the question 
+so that it can be approximately answered with an existing and convenient dataset. The most fun part
+is when you can use existing stores of data in unintended ways. For example, there is a plethora 
+of satelitte imagery of earth. We could use this data to learn about what kind of plants are growing in a particular area,
+or use pictures of the earth at night to estimate [rural electrification](http://www-personal.umich.edu/~brianmin/MinEtAl_Detection_IJRS_2013.pdf)
+in developing countries.
 
-### Connect datasets
-Since you're storing everything, you should focus on connecting datasets rather than on tuning models.
+
+### Connect Datasets
+Since you're storing everything, you should focus on connecting datasets that already exist rather than on tuning models.
 In a conventional statistics class, you'll learn a lot about how to choose
 analysis methods that are appropriate for your data collection approach and how
 to tune the models for a specific dataset.
 
 Now that we suddenly have hoards of inexpensive data that we haven't seen before,
-there's a lot to be learned by using more of these data. Don't worry so much
-about making the best use out of one dataset; data science is about using a range of
-datasets, and especially about connect one dataset to lots of other datasets. To use
-machine learning speak, you should focus more on collecting features rather than on
-tuning your model.
+there's a lot to be learned by utilizing more of these data. Don't worry so much
+about making the best use out of one dataset. Data science is about using a range of
+datasets, and especially about connecting one dataset to lots of other datasets. In machine learning speak, it's better
+to focus on on collecting features rather than on tuning your model.
 
-## Anything can be quantified
+## Anything Can Be Quantified
 Everything can be turned into a number, and these numbers can be put in tables.
-By quantifying things, we simplify them such that a computer can process them.
+By putting things in terms of numbers, we simplify them such that a computer can process them.
 
 A [spreadsheet about sewer overflows](https://data.illinois.gov/Municipality/SSMMA-Combined-Sewer-Overflow/5yuf-j7kn?)
 is clearly data to most people, but what about a [calendar](http://www.mo.gov/meetings/)?
-At first, a calendar
-might not seem like the sort of data that you analyze with statistics, but you
-can represent a calendar as a [spreadsheet](https://data.mo.gov/Government-Administration/Open-Meetings/au6r-w9n3)
-and [as a graph](http://thomaslevine.com/!/socrata-calendars).
+At first, a calendar might not seem like the sort of data that you analyze with statistics. However, you
+could also represent a calendar as a [spreadsheet](https://data.mo.gov/Government-Administration/Open-Meetings/au6r-w9n3)
+and [as a graph](http://thomaslevine.com/!/socrata-calendars). Then it's data.
 
 ![](http://thomaslevine.com/!/socrata-calendars/figure/day-of-week.png)
 
-Part of data science is not being restricted to the obvious variables that are presented to you.
-Maybe you have a bunch of PDF documents. You could extract the text and search through that, but
-that's not the only data you have; without looking at the text at all, you can get the page count,
-the size of the file, the shapes of the pages and the [program that created it](http://thomaslevine.com/!/parsing-pdfs/).
+The creative part of data science is moving past the obvious variables that are presented to you in the data you're looking at.
+Maybe you have a bunch of PDF documents. You could easily extract the text in the PDFs and search through that data. 
+However, there's other data you can get here that could be interesting, depending on the problem you're solving.
+Without looking at the text at all, you can get the page count, the file size, and the shapes of the pages
+and the [program that created it](http://thomaslevine.com/!/parsing-pdfs/). There's information hidden in lots of datasets
+that goes beyond the 
 
+There's lots of talk about the difference between different kinds of data. There's "qualitative" vs. "quantitative" and
+"unstructured" vs. "structured." 
 To me, there is no big difference between "qualitative" and "quantitative" data
 nor between "unstructured" and "structured" data because I know that I can convert
 between these opposites.
@@ -62,7 +70,7 @@ most of their fields are text, and their formats aren't particularly standard.
 But when you put them in [one database](http://opencorporates.com/) in a standard format,
 things start to [feel like data](http://registries.opencorporates.com/).
 
-## Boring work should be sent to robots
+## Send Boring Work to Robots
 If something must be done and nobody wants to do it, we should get a robot to
 do it. Within the context of data analysis, a typical boring task might be drawing a new graph every time some
 dataset is updated. A robot will do this with substantially more
@@ -93,6 +101,7 @@ thought: You don't need to know much math to do data science. Loads of wonderful
 algorithms have already been implemented for you, and simple algorithms work quite
 well. The more important tools are "plumbing" that connects different datasets and systems.
 
+## Data Science Mindset at Zipfian Academy
 Rather than grouping our 12-week course into different software packages or algorithms
 that you might want to use, we're grouping the course by typical projects that you
 might want to conduct. For example, the first week is a recommender. In doing each
