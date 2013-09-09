@@ -5,14 +5,10 @@ title: The data science mindset
 ---
 Data science involves using lots of hip tools with sexy names like "R",
 but data science isn’t all about the tools you use. I see it as a mindset,
-a way of looking at the world. Its about thinking like a scientist,
-extracting value from information. But it's also about using today's
-powerful computers to take advantage of the information (data) that
-we're already creating so that we don't have to collect new information
-all the time.
-
-If we start from the mindset that we're going to use today's computers
-to study the world, a lot of data science approaches naturally follow.
+a way of looking at the world. It's about taking advantage of our modern
+computers and all of the information (data) that they're already collecting
+in order to study how things work. If we start this mindset, a lot of
+data science approaches naturally follow.
 
 ## Store everything
 Storage is cheap, so you should store everything that is easy to collect.
@@ -20,7 +16,8 @@ Store it in the most raw form that is convenient, and don't worry very
 much about how or even whether you're going to analyze it.
 
 ### Use existing data
-When I'm asked a question about the world, I adapt the question so that it can
+Since we're already storing data, let's use it.
+When I have a question about the world, I adapt the question so that it can
 be approximately answered with an existing and convenient dataset. I look for
 opportunities to use existing stores of data in unintended ways.
 
@@ -31,7 +28,7 @@ analysis methods that are appropriate for your data collection approach and how
 to tune the models for a specific dataset.
 
 Now that we suddenly have hoards of inexpensive data that we haven't seen before,
-there's a lot to be learned by looking using more of these data. Don't worry so much
+there's a lot to be learned by using more of these data. Don't worry so much
 about making the best use out of one dataset; data science is about using a range of
 datasets, and especially about connect one dataset to lots of other datasets. To use
 machine learning speak, you should focus more on collecting features rather than on
@@ -86,9 +83,9 @@ To say this more explosively, I value laziness.
 Since I have the aforementioned mindset and the consequential mindsets, I wind
 up learning a bunch of tools that align with that mindset. For example, I know
 how to collect lots of data continuously, how to store it, how to get it out of
-storage, how to have a computer analyze datasets that I can't fit in my head,
+storage, how to have a computer fit models and make predictions on datasets that I can't fit in my head,
 how to convert paper documents into data tables, how to get the computer to tell
-me something that I and other people understand, and how to make all of this run
+me something that I and other people will understand, and how to make all of this run
 fast enough that I don't get tired of waiting.
 
 Properly discussing these relevant tools would take a while, but here's a small
@@ -97,7 +94,7 @@ algorithms have already been implemented for you, and simple algorithms work qui
 well. The more important tools are "plumbing" that connects different datasets and systems.
 
 Rather than grouping our 12-week course into different software packages or algorithms
-that you might want to do, we're grouping the course by typical projects that you
+that you might want to use, we're grouping the course by typical projects that you
 might want to conduct. For example, the first week is a recommender. In doing each
 project, students will use a range of different programs, datasets and methods, and
 they'll build the plumbing that connects these different components.
