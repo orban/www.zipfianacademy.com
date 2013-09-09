@@ -58,6 +58,11 @@ Company registration papers might not seem like data eitheir. They're not spread
 their formats aren't particularly standard, and people usually look at just one company's
 papers rather than 9000 companies' papers. But someone made a [dataset of these](http://opencorporates.com/).
 
+Part of data science is not being restricted to the obvious variables that are presented to you.
+Maybe you have a bunch of PDF documents. You could extract the text and search through that, but
+that's not the only data you have; without looking at the text at all, you can get the page count,
+the size of the file, the shapes of the pages and the [program that created it](http://thomaslevine.com/!/parsing-pdfs/).
+
 ## Boring work should be sent to robots
 In general, I think that people should only do things that they want to do;
 if something must be done and nobody wants to do it, a robot should do it[^robot]
