@@ -3,7 +3,7 @@ categories: data_science
 date: 2013/09/10 00:00:00
 title: The Data Science Mindset
 ---
-Names like 'R', 'Python', and 'D3' make data science seem like a it's a software arms race. 
+Names like 'R', 'SQL', and 'D3' make data science seem like a it's a software arms race. 
 In reality, data science isn't just about the tools. It's a mindset:
 a way of looking at the world. It's about taking advantage of our modern
 computers and all of the information that they're already collecting
@@ -45,7 +45,7 @@ between the different types.
 At first, the registration papers of company might not seem like data. They begin as paper,
 most of their fields are text, and their formats aren't particularly standardized.
 But when you put them in [a database](http://opencorporates.com/) in a machine-readable format,
-and qualitative data becomes [quantitative data](http://registries.opencorporates.com/). 
+qualitative data becomes [quantitative data](http://registries.opencorporates.com/). 
 
 
 ## Send Boring Work to Robots
