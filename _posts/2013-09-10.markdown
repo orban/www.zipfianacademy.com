@@ -23,7 +23,7 @@ Since we're already storing data, let's use it.
 When faced with a question about something happening in the world, data scientists adapt the question 
 so that it can be approximately answered with an existing and convenient dataset. The most fun part
 is when you can use existing stores of data in unintended ways. For example, there is a plethora 
-of satellite imagery of earth. We could use this data to learn about what kind of plants are growing in a particular area,
+of satellite imagery of earth. We could use this data to learn about [fertilizer use in Uganda](http://www.youtube.com/watch?v=3ajFogCaRbs),
 or use pictures of the earth at night to estimate [rural electrification](http://www-personal.umich.edu/~brianmin/MinEtAl_Detection_IJRS_2013.pdf)
 in developing countries.
 
@@ -96,7 +96,7 @@ head around, convert paper documents into electronic tables, get the computer to
 you something easy to understand, and how to make all of the computer processes run
 fast enough so that it doesn't take all day.
 
-Properly discussing these relevant tools is another post (maybe a book) but here's one
+Properly discussing these relevant tools is another post (maybe a book), but here's one
 thought: you don't need to know much math to do data science. Loads of wonderful
 algorithms have already been implemented for you, and simple algorithms often work quite
 well. The trickier tools to master are the "plumbing" that connects different datasets and systems.
@@ -108,3 +108,8 @@ In our 12-week course, we organize classes by projects - like a recommendation e
 by software packages or algorithms. Starting with a question or problem, we look at different programs,
 datasets, and methods to use, plus the plumbing to connect the different components together. It's a data scientist's
 pratical mindset applied to learning.
+
+
+
+
+We teach the hip tools with sexy names, but we also teach 
