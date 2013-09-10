@@ -102,14 +102,12 @@ algorithms have already been implemented for you, and simple algorithms often wo
 well. The trickier tools to master are the "plumbing" that connects different datasets and systems.
 
 ## Data Science Mindset at Zipfian Academy
-The data science mindset and the tools work hand-in-hand. Mastering both is key to being a great data scientist.
-That's why we're excited about teaching the data science mindset, just like we teach the problem-solving tools.
-In our 12-week course, we organize classes by projects - like a recommendation engine or a spam filter - rather than
-by software packages or algorithms. Starting with a question or problem, we look at different programs,
-datasets, and methods to use, plus the plumbing to connect the different components together. It's a data scientist's
-pratical mindset applied to learning.
+Our courses obviously teach lots of data science tools, but they also teach the data
+science mindset, because you need both to be a great data scientist.
+To this end, we organize our 12-week course by projects---like a recommendation engine
+or a spam filter---rather than by software packages or algorithms.
+We teach the various tools in context of applied projects so that students learn
+how to choose the appropriate tool and how to build the plumbing that connects them.
 
-
-
-
-We teach the hip tools with sexy names, but we also teach 
+We're not just teaching people the hip tools with sexy names; we're teaching people to
+apply the data science mindset in order to find answers to complex problems.
