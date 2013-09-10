@@ -3,60 +3,38 @@ categories: data_science
 date: 2013/09/10 00:00:00
 title: The Data Science Mindset
 ---
-Data scientists use lots of hip tools with sexy names like "R" and "Python",
-but data science isn't all about the tools you use. To us, data science is a mindset:
+Names like 'R', 'Python', and 'D3' make data science seem like a it's a software arms race. 
+In reality, data science isn't just about the tools. It's a mindset:
 a way of looking at the world. It's about taking advantage of our modern
-computers and all of the information (aka data) that they're already collecting
-in order to study how things work. If we start with this mindset, a lot of
-data science approaches naturally follow.
-
-These are the core tenets of the data science mindset:
+computers and all of the information that they're already collecting
+in order to study how things work. Data is everything and everything is data. If we start with this mindset, a lot of
+data science approaches naturally follow. 
 
 ## Store Everything
-Storage is cheap, so you should store everything that is easy to collect.
-You don't even need a full-fledged research plan before you start collecting data.
-Store it in the rawest form that is convenient, and don't worry very
-much about how or even whether you're going to analyzes it. That part comes later.
+Storage is cheap. Collect everything and ask questions later. Store it in the rawest form that is convenient, and don't worry about how or even when you're going to analyze it. That part comes later. (Within reason -- we're not advocating for PRISM-style mass surveillance.)
 
 ### Use Existing Data
-Since we're already storing data, let's use it.
-When faced with a question about something happening in the world, data scientists adapt the question 
-so that it can be approximately answered with an existing and convenient dataset. The most fun part
-is when you can use existing stores of data in unintended ways. For example, there is a plethora 
-of satellite imagery of earth. We could use this data to learn about [fertilizer use in Uganda](http://www.youtube.com/watch?v=3ajFogCaRbs),
-or use pictures of the earth at night to estimate [rural electrification](http://www-personal.umich.edu/~brianmin/MinEtAl_Detection_IJRS_2013.pdf)
-in developing countries.
+We're already storing data, let's use it.
+When faced with questions, data scientists adapt the query so that it can be approximately answered with an existing and convenient dataset. The best part of data science is discovering surprising applications of existing stores of data. For example, there is a plethora of satellite imagery of Earth. We could use this data to learn about [fertilizer use in Uganda](http://www.youtube.com/watch?v=3ajFogCaRbs), or use pictures of the Earth at night to estimate [rural electrification](http://www-personal.umich.edu/~brianmin/MinEtAl_Detection_IJRS_2013.pdf) in developing countries.
 
 ### Connect Datasets
-Since you're storing everything, you should focus on connecting datasets that already exist rather
-than on tuning models. Conventional statistics teaches a lot about how to choose
-analysis methods that are appropriate for your data collection approach and how
+Focus on connecting disparate datasets rather than tuning your models. Conventional statistics teaches a lot about how to choose analysis methods that are appropriate for your data collection approach and how
 to tune the models for a specific dataset.
 
-Now that we suddenly have hoards of inexpensive data in the world in ways we never have before,
-there's a lot to be learned by utilizing more of these data. Don't worry so much
-about making the best use out of one dataset. Data science is about using a range of
-datasets, and especially about connecting one dataset to lots of other datasets. In machine learning speak, it's better
-to focus on on collecting features rather than on tuning your model.
+We're storing everything, all over the world, inexpensively, for the first time in history. There are many lessons to be learned by utilizing more of this treasure trove. Don't worry about making the best use out of a single dataset. Data science is about using a range of datasets, connecting the dots between one set of data and another. In machine learning speak, it's better to collect more features rather than spend days optimizing hyperparameters. 
 
 ## Anything Can Be Quantified
-Everything can be turned into a number, and these numbers can be put in tables.
-By putting things in terms of numbers, we simplify them such that a computer can process them.
+Our culture loves to quantify. If you can turn it into a number, that number can be put into a table. Importantly, that table can now be processed by a computer. 
 
 A [spreadsheet about sewer overflows](https://data.illinois.gov/Municipality/SSMMA-Combined-Sewer-Overflow/5yuf-j7kn?)
 is clearly data to most people, but what about a [calendar](http://www.mo.gov/meetings/)?
 At first, a calendar might not seem like the sort of data that you analyze with statistics. However, you
 could also represent a calendar as a [spreadsheet](https://data.mo.gov/Government-Administration/Open-Meetings/au6r-w9n3)
-and [as a graph](http://thomaslevine.com/!/socrata-calendars). Then it's data.
+and [as a graph](http://thomaslevine.com/!/socrata-calendars). 
 
 ![](http://thomaslevine.com/!/socrata-calendars/figure/day-of-week.png)
 
-The creative part of data science is moving past the obvious variables that are presented to you in the data 
-you're looking at. Maybe you have a bunch of PDF documents. You could easily extract the text in the
-PDFs and search through that data. However, there's other data you can get here that could be interesting, 
-depending on the problem you're solving. Without looking at the text at all, you can get the page count,
-the file size, and the shapes of the pages and the [program that created it](http://thomaslevine.com/!/parsing-pdfs/).
-There's information hidden in lots of datasets that goes beyond what's immediately obvious.
+Data science becomes a creative endeavor when peeling away the obvious varibles presented to you. Maybe you have a bunch of PDF documents. You could easily extract the text in the PDFs and search through that data. Depending on the problem you are solving, these files hold more interesting information than just the text. You can get the page count, the file size, and the shapes of the pages and the [program that created it](http://thomaslevine.com/!/parsing-pdfs/). There's information hidden in lots of datasets that goes beyond what's immediately obvious.
 
 There's lots of talk about the difference between different kinds of data. There's "qualitative" vs.
 "quantitative" and "unstructured" vs. "structured." 
@@ -66,35 +44,24 @@ between the different types.
 
 At first, the registration papers of company might not seem like data. They begin as paper,
 most of their fields are text, and their formats aren't particularly standardized.
-But when you put them in [one database](http://opencorporates.com/) in a standard format,
-things start to [feel a whole lot like data](http://registries.opencorporates.com/). 
-This means qualitative data becomes quantatitive data, and it's all really just...data.
+But when you put them in [a database](http://opencorporates.com/) in a machine-readable format,
+and qualitative data becomes [quantitative data](http://registries.opencorporates.com/). 
+
 
 ## Send Boring Work to Robots
-If something must be done and nobody wants to do it, we should get a robot to
-do it. Within the context of data analysis, a typical boring task might be drawing a new graph every time some
-dataset is updated. A robot will do this with substantially more
-consistency and accuracy than a human and at a substantially lower cost.
+We no longer live in an era where "computer" refers to someone who carries out calculations. Find yourself doing something over and over? Give it to the bots. As far as data analysis goes, modern computers can be far more effective at rote tasks, such as drawing new graphs with every update of a dataset. 
 
-Data collection is one sort of task that should regularly be sent to a robot. Questionnaires
-and lab studies are too much work for the researcher and the participants involved. The data science mindset 
-says collect the data automatically and unobtrusively,
-like by logging the clicks that you're already making on a website.
+Data collection is a prime example of a task that should be automated. It's a common scene in university research labs to find swaths of grad students handing out paper questionnaires to study participants. The data scientist says collect the data automatically and unobtrusively, using existing systems whenever possible. The supercomputers we each carry in our pocket is a great place to start. 
 
-Robots are particularly good at remembering what you did so that you don't have to do so. Rather than learning
+This mindset can be applied not only to the data, but also to the process itself. Rather than learning
 and remembering your entire analysis process, you can write a program that does the whole
 thing for you, from the original acquisition of the data, to the modeling, to the presentation
 of results to another person. By making everything a program, you make it easier to
-find mistakes, to update your analyses, and to turn an analysis into a product.
+find mistakes, to update your analyses, and reproduce your results.
 
 ## Tools
-Once you're inside the data science mindset, it only makes sense to acquire skills that align with that 
-mindset and help solve interesting problems. Storage and analysis tools mean you can 
-collect lots of data continuously, store it, and then get it back out of
-storage. You can tell a computer to fit models and make predictions about datasets that are too big to wrap your
-head around, convert paper documents into electronic tables, get the computer to tell
-you something easy to understand, and how to make all of the computer processes run
-fast enough so that it doesn't take all day.
+Once inside the data science mindset, solving interesting problems becomes a function of data acquisition and processing. Computers can fit models and make predictions about datasets that are too big to wrap your
+head around, convert paper documents into electronic tables, and probably know more about you and your habits than you know yourself! Use the tools available to you, but don't get caught on the tools themselves.
 
 Properly discussing these relevant tools is another post (maybe a book), but here's one
 thought. While it always helps to have more education, you don't need a PhD in math or
@@ -103,12 +70,11 @@ algorithms have already been implemented for you, and simple algorithms often wo
 well. If you're just getting started, focus on the "plumbing" that connects different datasets and systems.
 
 ## Data Science Mindset at Zipfian Academy
-Our courses obviously teach lots of data science tools, but they also teach the data
+Our course teaches many data science tools, but we also teach the data
 science mindset, because you need both to be a great data scientist.
-To this end, we organize our 12-week course by projects---like a recommendation engine
-or a spam filter---rather than by software packages or algorithms.
-We teach the various tools in context of applied projects so that students learn
+To this end, we organize our 12-week course by projects -- such as a recommendation engine
+or spam filter -- rather than software packages or algorithms.
+We teach the various tools in context of applied projects so students learn
 how to choose the appropriate tool and how to build the plumbing that connects them.
 
-We're not just teaching people the hip tools with sexy names; we're teaching people to
-apply the data science mindset in order to find answers to complex problems.
+In the end, it's not about the newest, trendiest framework or fastest data analysis platform. It's about finding interesting insights from your data and sharing it with the world. Start small, get your hands dirty, and have fun!
