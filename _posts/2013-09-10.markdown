@@ -97,9 +97,10 @@ you something easy to understand, and how to make all of the computer processes 
 fast enough so that it doesn't take all day.
 
 Properly discussing these relevant tools is another post (maybe a book), but here's one
-thought: you don't need to know much math to do data science. Loads of wonderful
+thought. While it always helps to have more education, you don't need a PhD in math or
+computer science in order to create useful things. Loads of wonderful
 algorithms have already been implemented for you, and simple algorithms often work quite
-well. The trickier tools to master are the "plumbing" that connects different datasets and systems.
+well. If you're just getting started, focus on the "plumbing" that connects different datasets and systems.
 
 ## Data Science Mindset at Zipfian Academy
 Our courses obviously teach lots of data science tools, but they also teach the data
