@@ -3,8 +3,8 @@ categories: data_science
 date: 2013/09/10 00:00:00
 title: The Data Science Mindset
 ---
-Data science involves using lots of hip tools with sexy names like "R" and "Python"
-but data science isn't all about the tools you use. Data science is a mindset:
+Data scientists use lots of hip tools with sexy names like "R" and "Python",
+but data science isn't all about the tools you use. To us, data science is a mindset:
 a way of looking at the world. It's about taking advantage of our modern
 computers and all of the information (aka data) that they're already collecting
 in order to study how things work. If we start with this mindset, a lot of
